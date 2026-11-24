@@ -1202,3 +1202,17 @@ button, input, select, textarea { font-family: inherit; }
 /* Q4: both feedbacks (the retry and the final one) sit under the answer box, on the right, so they never cover the help popup on the left (developer, 2026-11-12) */
 #feedback-popup.fb-q4 { left: 890px; top: 660px; width: 860px; }
 #feedback-popup.fb-q4.retry { left: auto; right: 170px; top: 660px; width: auto; max-width: 860px; }
+
+/* Q6a / Q6b: bigger numbers on the axis (QA comments on screens 13 and 14, 2026-11-16).
+   Q6a numbers every 2,000 (marks stay every 1,000) so the bigger numbers do not touch; the axis grows to make room for them. */
+[data-sid="q6a"] .bar-axis, [data-sid="q6b"] .bar-axis { height: 68px; border-top-color: #7b8594; }
+[data-sid="q6a"] .bar-axis span, [data-sid="q6b"] .bar-axis span { top: 28px; font-size: 34px; }
+/* ticks (QA, 2026-11-18, from the reviewer's drawings): darker and bigger, hanging below the axis line; the numbered ones longer and thicker */
+[data-sid="q6a"] .bar-axis span.tick::before, [data-sid="q6b"] .bar-axis span.tick::before { top: -28px; width: 2px; height: 13px; margin-left: -1px; background: #4b5563; }
+[data-sid="q6a"] .bar-axis span.tick.labelled::before, [data-sid="q6b"] .bar-axis span.tick.labelled::before { width: 3px; height: 22px; margin-left: -1.5px; }
+/* arrowhead at the end of the number axis: the line runs on past the last number and ends in an arrow */
+[data-sid="q6a"] .bar-axis::before, [data-sid="q6b"] .bar-axis::before { content: ''; position: absolute; left: 100%; top: -2px; width: 30px; height: 2px; background: #7b8594; }
+[data-sid="q6a"] .bar-axis::after, [data-sid="q6b"] .bar-axis::after { content: ''; position: absolute; left: calc(100% + 30px); top: -15px; border-left: 28px solid #7b8594; border-top: 13px solid transparent; border-bottom: 13px solid transparent; }
+[data-sid="q6a"] .bar-track::after, [data-sid="q6b"] .bar-track::after { background: #7b8594; }   /* the vertical line, same grey */
+[data-sid="q6b"] .bar-chart { left: 100px; width: 940px; }   /* wider, so the 5,000 numbers at this size do not touch */
+[data-sid="q6a"] .bar-axis-title, [data-sid="q6b"] .bar-axis-title { margin-top: 20px; font-size: 40px; }
