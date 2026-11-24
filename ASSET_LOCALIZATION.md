@@ -4,6 +4,8 @@ Built 2026-11-11 for the Arabic build `STEM-Recycle-and-build-AR` (Hebrew source
 the skill's rule is to list it, with a proposed Arabic and a call on whether it blocks release.
 **All Arabic below is Claude's proposal (PENDING): the Arabic reviewer / translator confirms it before an artist uses it.**
 
+**Update 2026-11-24:** the six pictures `project-bg`, `deposit-value-bg`, `dream-bg`, `finish-bg`, `bg-street-dim` and `bg-garden-dim` now exist in real Arabic in `assets-ar/images/` (made by Yael, checked against the originals). Still Hebrew: the two video posters (`video-cart-poster.jpg`, `video-end-poster.jpg`) and the videos themselves.
+
 ## How the list was made
 
 - Contact sheets of all 31 files in `assets/images/`, looked at by eye (an automated text sweep reads live text only;
