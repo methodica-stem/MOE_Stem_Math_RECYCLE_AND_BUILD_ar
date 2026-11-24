@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نعيد التدوير ونبني</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fonts-ar.css">
+<link rel="stylesheet" href="style-ar.css">
+</head>
+<body>
+<div id="app" role="main">
+
+<!-- ===================================================================
+     One <section> per screen, numbered 1..N with no gaps, written out in
+     full here (the QA system counts the sections in this file).
+     Attribute order matters to the translation tools: class first, then
+     data-screen.
+       data-sid    short ASCII name, stable when screens are renumbered
+       data-type   opening | explain | video | tiles | hub | question | applet | finish
+     Banner comment per screen: number, title, storyboard slides.
+     =================================================================== -->
+
+<!-- ================= SCREEN 1 — סרטון פתיחה: חצר בית הספר (שקפים 2-3) ================= -->
+<section class="screen active" data-screen="1" data-sid="video-open" data-type="video" tabindex="-1">
+  <img class="screen-bg" src="assets/images/video-open-poster.jpg" alt="">
+  <div class="video-wrap">
+    <video class="video-el" poster="assets/images/video-open-poster.jpg" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noremoteplayback nofullscreen noplaybackrate"><source src="assets/videos/video-open.mp4#t=0.001" type="video/mp4"></video>
+    <div class="vcap-src" data-clear-after="41.41" hidden>
+      <span data-t="1.8" data-end="5.35">أوف، يا له من ملل! انتهت الاستراحة!</span>
+      <span data-t="6.37" data-end="7.9">لم يكن لدينا مكان للجلوس مرة أخرى.</span>
+      <span data-t="8.0" data-end="12.05">هذه الزاوية حزينة جدًا، ليس فيها سوى الإسمنت والغبار.</span>
+      <span data-t="12.15" data-end="14.72">صحيح، هذا محبط فعلًا.</span>
+      <span data-t="15.24" data-end="22.1">لحظة! خطرت لي فكرة! انظروا كم
+زجاجة بلاستيكية ملقاة هنا في كل مكان.</span>
+      <span data-t="22.5" data-end="23.95">إذا سلّمناها لإعادة التدوير،</span>
+      <span data-t="24.0" data-end="27.167">يتيح لنا استخدام رسوم الإيداع لنشتري بأنفسنا</span>
+      <span data-t="27.207" data-end="31.8">شتلات وأزهارًا ونبني هنا
+زاوية جلوس خضراء وممتعة.</span>
+      <span data-t="32.13" data-end="34.917">يا لها من فكرة ممتازة يا مايا!</span>
+      <span data-t="34.957" data-end="41.41">ولكن انتظروا، لكي ينجح الأمر،
+علينا أن نخطط لكل شيء كالمحترفين.</span>
+    </div>
+    <div class="video-caption hidden"><p></p></div>
+    <button class="play-btn-big" type="button" aria-label="تشغيل الفيديو"></button>
+  </div>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 2 — החלום: פינה ירוקה (שקף 3 · PSD p2) ================= -->
+<section class="screen" data-screen="2" data-sid="dream" data-type="explain" data-arrow-delay="4.6" tabindex="-1">
+  <img class="screen-bg" src="assets/images/dream-bg.jpg" alt="" loading="lazy">
+  <audio class="narration" src="assets/audio/screen2.mp3" preload="auto"></audio>
+  <button class="narr-btn" type="button" aria-label="تشغيل السرد الصوتي" aria-pressed="false"></button>
+  <div class="narration-banner dream-banner"><p class="reveal" data-at="0.2">انضموا إلى الأصدقاء وساعدوهم في تحويل الفكرة إلى واقع.</p></div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 3 — הפרויקט "ממחזרים ובונים" (שקף 5) ================= -->
+<section class="screen" data-screen="3" data-sid="project" data-type="explain" data-arrow-delay="17.8" tabindex="-1">
+  <img class="screen-bg" src="assets/images/project-bg.jpg" alt="" loading="lazy">
+  <audio class="narration" src="assets/audio/screen3-new.mp3" preload="auto"></audio>
+  <button class="narr-btn" type="button" aria-label="تشغيل السرد الصوتي" aria-pressed="false"></button>
+  <div class="text-panel">
+    <p class="reveal" data-at="0">قرر مجلس الطلّاب في المدرسة الانضمام إلى المشروع وأطلق عليه اسم "نعيد التدوير ونبني".</p>
+    <p class="reveal" data-at="8">سيجمع جميع الطلّاب زجاجات الإيداع خلال السنة الدراسية، وسيُستخدم المال الذي سيُجمع لبناء زاوية جلوس في ساحة المدرسة.</p>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 4 — דמי הפיקדון (שקף 6) ================= -->
+<section class="screen" data-screen="4" data-sid="deposit-value" data-type="explain" data-arrow-delay="12.9" tabindex="-1">
+  <img class="screen-bg" src="assets/images/deposit-value-bg.jpg" alt="" loading="lazy">
+  <audio class="narration" src="assets/audio/screen5.mp3" preload="auto"></audio>
+  <button class="narr-btn" type="button" aria-label="تشغيل السرد الصوتي" aria-pressed="false"></button>
+  <div class="text-panel">
+    <p class="reveal" data-at="0"><strong>بحث مجلس الطلّاب ووجد ما يلي:</strong></p>
+    <p class="reveal" data-at="3.0"><strong>رسوم الإيداع:</strong> المبلغ الذي نحصل عليه مقابل كل زجاجة فارغة نعيدها.</p>
+    <p class="reveal" data-at="8.0">تبلغ رسوم الإيداع حاليًا <strong>30 أغورة للزجاجة</strong>.</p>
+    <!-- Poll: a general question, not scored. The forward arrow opens once an option is chosen. -->
+    <div class="poll reveal" data-at="12.5" role="group" aria-labelledby="deposit-value-poll-q">
+      <p class="poll-q" id="deposit-value-poll-q">هل سبق لكم أن أعدتم تدوير الزجاجات؟</p>
+      <div class="poll-opts">
+        <button class="poll-opt" type="button" aria-pressed="false"><span class="poll-front">نعم، سبق أن أعدت تدوير الزجاجات!</span><span class="poll-back" aria-hidden="true">كل الاحترام! <span class="poll-emoji">👏</span></span></button>
+        <button class="poll-opt" type="button" aria-pressed="false"><span class="poll-front">لا، لم أعد تدوير الزجاجات بعد</span><span class="poll-back" aria-hidden="true">لكل شيء بداية<span class="poll-emoji">🍃</span></span></button>
+      </div>
+    </div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 5 — סרטון: חדר מועצת התלמידים (שקף 7) ================= -->
+<section class="screen" data-screen="5" data-sid="video-council" data-type="video" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-council-room.jpg" alt="" loading="lazy">
+  <div class="video-wrap">
+    <video class="video-el" poster="assets/images/bg-council-room.jpg" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noremoteplayback nofullscreen noplaybackrate"><source src="assets/videos/video-council.mp4#t=0.001" type="video/mp4"></video>
+    <div class="vcap-src" data-clear-after="39.49" hidden>
+      <span data-t="1.41" data-end="6.32">حسنًا يا أصدقاء، تحققت! قانون الإيداع
+يمنحنا 30 أغورة عن كل زجاجة.</span>
+      <span data-t="6.36" data-end="12.811">إذا جنّدنا جميع طلّاب المدرسة، فسيمكننا جمع مبلغ كبير
+واستثماره في زاوية الجلوس التي نخطِّط لبنائها.</span>
+      <span data-t="12.851" data-end="15.57">سنجمع الزجاجات في غرفة سمير، عامل الصيانة.</span>
+      <span data-t="16.07" data-end="21.216">حين نصل إلى كمية معينة من الزجاجات،
+نستدعي شاحنة شركة إعادة التدوير،</span>
+      <span data-t="21.256" data-end="23.109">وهم سيحوّلون لنا النقود.</span>
+      <span data-t="23.149" data-end="27.143">إذا كان عدد الزجاجات قليلًا،
+نستطيع الذهاب وحدنا إلى سوبرماركت الحي.</span>
+      <span data-t="27.183" data-end="33.481">رائع! هيا نفحص بحسب عدد الطلّاب في مدرستنا،
+ما إذا كانت الأعداد منطقية أصلًا!</span>
+      <span data-t="33.521" data-end="39.49">هنا يأتي دوركم! ساعدونا في حساب
+عدد الزجاجات التي يجب جمعها في الشهر الأول.</span>
+    </div>
+    <div class="video-caption hidden"><p></p></div>
+    <button class="play-btn-big" type="button" aria-label="تشغيل الفيديو"></button>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 6 — שאלה 1: השלמת תרגיל (שקפים 8-9) ================= -->
+<section class="screen" data-screen="6" data-sid="q1" data-type="question" data-kind="input" data-weight="12.5" data-step="1" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-room-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q1-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q1-help" role="dialog" aria-label="مساعدة" hidden><p><strong>تلميح:</strong> يمكن استخدام قانون التوزيع لحساب عدد الزجاجات.</p><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 1</h2>
+    <p class="q-body">يتعلّم في مدرسة "البستان" 470 طالبًا.</p>
+    <p class="q-body">طُلب من كل طالب جمع 15 زجاجة فارغة في الشهر الأول استعدادًا لإطلاق المشروع.</p>
+    <p class="q-body">أنجز جميع الطلّاب المهمة!</p>
+    <p class="q-body">كم زجاجة جُمعَت بالإجمال في مدرسة "البستان" في هذا الشهر؟</p>
+    <p class="q-instruction">أكملوا الأعداد الناقصة:</p>
+    <p class="q-equation"><span class="eq">470 × 15 = 470 × 10 + 470 × <input class="num-input" type="text" inputmode="numeric" data-answer="5" aria-label="عدد ناقص 1"> = <input class="num-input" type="text" inputmode="numeric" data-answer="4700" data-group="sum" aria-label="عدد ناقص 2"> + <input class="num-input" type="text" inputmode="numeric" data-answer="2350" data-group="sum" aria-label="عدد ناقص 3"> = <input class="num-input" type="text" inputmode="numeric" data-answer="7050" aria-label="عدد ناقص 4"></span></p>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>أنجز جميع الطلّاب المهمة وجمعوا 7,050 زجاجة في الشهر الأول.</p><p>الحساب الذي أجريناه:</p><p><span class="eq">15 × 470 =</span></p><p><span class="eq">5 × 470 + 10 × 470 =</span></p><p><span class="eq">2,350 + 4,700 =</span></p><p><span class="eq">7,050</span></p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>أنجز جميع الطلّاب المهمة وجمعوا 7,050 زجاجة في الشهر الأول.</p><p>الحساب الذي أجريناه:</p><p><span class="eq">15 × 470 =</span></p><p><span class="eq">5 × 470 + 10 × 470 =</span></p><p><span class="eq">2,350 + 4,700 =</span></p><p><span class="eq">7,050</span></p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 7 — שאלה 2: גרירת מספרים לטבלה (שקפים 10-11) ================= -->
+<section class="screen" data-screen="7" data-sid="q2" data-type="question" data-kind="dnd" data-weight="12.5" data-step="2" data-mark-attempts data-slot-marks data-reveal-delay="3" data-arrow-after-hear tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-room-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q2-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q2-help" role="dialog" aria-label="مساعدة" hidden><p><strong>تلميح:</strong> جمعت طبقة الروابع 30 زجاجة أكثر من طبقة الثوالث.</p><p>ماذا يعني هذا بالنسبة لعدد الطلّاب في طبقتي الثوالث والروابع؟</p><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 2</h2>
+    <p class="q-body q2-text">قام المجلس الطلّابي في المدرسة بتركيز عدد الزجاجات التي جمعها تلاميذ كلّ طبقة في جدول.</p>
+    
+    <p class="q-body q2-text">تذكّروا، جمع كل طالب 15 زجاجة.</p>
+    <p class="q-instruction q2-text">اسحبوا الأعداد الملائمة إلى مكانها المناسب في الجدول (انتبهوا، فقط قسم من الأعداد ملائم).</p>
+    <table class="data-table">
+      <thead><tr><th scope="col">الطبقة</th><th scope="col">عدد الطلّاب</th><th scope="col">عدد الزجاجات التي جُمعَت</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">طبقة الأوائل</th><td>62</td><td><span class="dnd-slot" data-accept="c6" role="button" tabindex="0" aria-label="عدد الزجاجات في طبقة الأوائل"></span></td></tr>
+        <tr><th scope="row">طبقة الثواني</th><td>66</td><td><span class="dnd-slot" data-accept="c1" role="button" tabindex="0" aria-label="عدد الزجاجات في طبقة الثواني"></span></td></tr>
+        <tr><th scope="row">طبقة الثوالث</th><td><span class="dnd-slot" data-accept="c2" role="button" tabindex="0" aria-label="عدد الطلّاب في طبقة الثوالث"></span></td><td>1500</td></tr>
+        <tr><th scope="row">طبقة الروابع</th><td><span class="dnd-slot" data-accept="c3" role="button" tabindex="0" aria-label="عدد الطلّاب في طبقة الروابع"></span></td><td>1530</td></tr>
+        <tr><th scope="row">طبقة الخوامس</th><td>67</td><td>1,005</td></tr>
+        <tr><th scope="row">طبقة السوادس</th><td>73</td><td>1095</td></tr>
+      </tbody>
+    </table>
+    <button class="info-btn info-row-a pop-toggle" type="button" aria-controls="q2-info1" aria-expanded="false" aria-label="معلومات"></button><span class="pop info-pop" id="q2-info1" role="note" hidden>يمكن الاستعانة بحساب عدد زجاجات طبقة الأوائل للوصول إلى عدد زجاجات طبقة الثواني دون حساب - حاصل الضرب <span class="eq">15 x 66</span></span>
+    <button class="info-btn info-row-d pop-toggle" type="button" aria-controls="q2-info2" aria-expanded="false" aria-label="معلومات"></button><span class="pop info-pop" id="q2-info2" role="note" hidden>يمكن الاستعانة بالفرق بين عدد الزجاجات التي جمعتها طبقة الروابع وعدد الزجاجات التي جمعتها طبقة الثوالث لحساب عدد الطلّاب في طبقة الروابع.</span>
+    <div class="dnd-bank" aria-label="مخزن الأعداد">
+      <button class="dnd-chip" type="button" data-chip="c1" data-order="1">990</button>
+      <button class="dnd-chip" type="button" data-chip="c2" data-order="2">100</button>
+      <button class="dnd-chip" type="button" data-chip="c3" data-order="3">102</button>
+      <button class="dnd-chip" type="button" data-chip="c4" data-order="4">130</button>
+      <button class="dnd-chip" type="button" data-chip="c5" data-order="5">934</button>
+      <button class="dnd-chip" type="button" data-chip="c6" data-order="6">930</button>
+      <button class="dnd-chip" type="button" data-chip="c7" data-order="7">1,000</button>
+      <button class="dnd-chip" type="button" data-chip="c8" data-order="8">936</button>
+    </div>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى. يمكنكم النقر على زر المساعدة للحصول على تلميح.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>هذه هي الإجابات الصحيحة.</p><p>يجمع كل طالب 15 زجاجة بالضبط حسب بيانات المجلس. نضرب عدد الطلّاب في 15 لإيجاد عدد الزجاجات.</p><p>نقسم عدد الزجاجات التي جُمعت على 15 لإيجاد عدد الطلّاب.</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>هذه هي الإجابات الصحيحة.</p><p>يجمع كل طالب 15 زجاجة بالضبط حسب بيانات المجلس. نضرب عدد الطلّاب في 15 لإيجاد عدد الزجاجات.</p><p>نقسم عدد الزجاجات التي جُمعت على 15 لإيجاد عدد الطلّاب.</p></div>
+  </div>
+  <div class="hear-more" hidden>
+    <img class="hear-kid" src="assets/images/char-boy-beige.png" alt="">
+    <audio class="hear-audio" src="assets/audio/q2-feedback.mp3" preload="auto"></audio>
+    <div class="hear-bubble"><p>خطرت لي طريقة حساب أخرى...</p><p>لا حاجة إلى حساب كل شيء من جديد لإيجاد الإجابة.</p><button class="btn-dark hear-btn" type="button">أريد أن أسمع!</button></div>
+    <div class="hear-panel" hidden>
+      <p>بعد أن وجدت عدد الزجاجات التي جمعها تلاميذ طبقة الأوائل، لاحظت أنّه يوجد في طبقة الثواني 4 تلاميذ أكثر ممّا في طبقة الأوائل.</p>
+      <p>جمع كل تلميذ 15 زجاجة، لذلك جمع تلاميذ طبقة الثواني 60 زجاجة إضافية.</p>
+      <p>حسب المعطيات جمعت طبقة الروابع 30 زجاجة أكثر من طبقة الثوالث.</p>
+      <p>أعرف أن كل طالب جمع 15 زجاجة، لذلك أفهم أن في طبقة الروابع طالبين إضافيين.</p>
+      <button class="btn-dark hear-back" type="button">العودة إلى التغذية الراجعة</button>
+    </div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 8 — סרטון: עגלת הבקבוקים (שקף 12) ================= -->
+<section class="screen" data-screen="8" data-sid="video-cart" data-type="video" tabindex="-1">
+  <img class="screen-bg" src="assets/images/video-cart-poster.jpg" alt="" loading="lazy">
+  <div class="video-wrap">
+    <video class="video-el" poster="assets/images/video-cart-poster.jpg" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noremoteplayback nofullscreen noplaybackrate"><source src="assets/videos/video-cart.mp4#t=0.001" type="video/mp4"></video>
+    <div class="vcap-src" data-clear-after="15.84" hidden>
+      <span data-t="1.0" data-end="4.589">واو، أبدعنا! جمعنا جبالًا من الزجاجات!</span>
+      <span data-t="4.629" data-end="8.13">لحظة... ماذا نستطيع أن نشتري بهذا فعلًا؟</span>
+      <span data-t="8.71" data-end="10.362">الحقيقة؟ لا أعرف أنا أيضًا.</span>
+      <span data-t="10.402" data-end="15.84">هيا نكتشف كيف نحوّل أكوام البلاستيك
+هذه إلى مال نشتري به أشياء.</span>
+    </div>
+    <div class="video-caption hidden"><p></p></div>
+    <button class="play-btn-big" type="button" aria-label="تشغيل الفيديو"></button>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 9 — שאלה 3: כמה אגורות (שקפים 13-14) ================= -->
+<section class="screen" data-screen="9" data-sid="q3" data-type="question" data-kind="input" data-weight="12.5" data-step="3" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-street-dim.jpg" alt="" loading="lazy">
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 3</h2>
+    <p class="q-body">نجح طلّاب مدرسة "البستان" في جمع 20,000 زجاجة خلال فترة معينة.</p>
+    <p class="q-body">كم أغورة جمعت المدرسة بالإجمال مقابل هذه الزجاجات؟</p>
+    <p class="q-body">تذكّروا، نحصل على 30 أغورة مقابل كل زجاجة.</p>
+    <p class="q-instruction">اكتبوا الحلّ في الخانة:</p>
+    <p class="q-answer-line"><input class="num-input" type="text" inputmode="numeric" data-answer="600000" aria-label="عدد الأغورات"> أغورة.</p>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>نضرب عدد الزجاجات التي جُمعت في 30 <strong>أغورة</strong> عن كل زجاجة:</p><p><span class="eq">20,000 x 30 = 600,000</span></p><p>جمع الطلّاب 600,000 <strong>أغورة</strong>.</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>نضرب عدد الزجاجات التي جُمعت في 30 <strong>أغورة</strong> عن كل زجاجة:</p><p><span class="eq">20,000 x 30 = 600,000</span></p><p>جمع الطلّاب 600,000 <strong>أغورة</strong>.</p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 10 — שאלה 4: המרה לשקלים (שקפים 15-16) ================= -->
+<section class="screen" data-screen="10" data-sid="q4" data-type="question" data-kind="input" data-weight="12.5" data-step="4" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-street-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q4-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q4-help" role="dialog" aria-label="مساعدة" hidden><p><strong>تلميح:</strong> كل 1 شيكل يساوي 100 أغورة.</p><div class="coins" dir="ltr"><figure class="coin-group"><span class="coin-grid" role="img" aria-label="عشر قطع نقدية من فئة 10 أغورات"><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""><img src="assets/images/q4-coin-10.png" alt=""></span><figcaption dir="rtl">100 أغورة</figcaption></figure><span class="coin-eq">=</span><figure class="coin-group"><img src="assets/images/q4-coin-shekel.png" alt="قطعة نقدية من فئة شيكل واحد"><figcaption dir="rtl">1 شيكل</figcaption></figure></div><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 4</h2>
+    <p class="q-body">رأينا أن طلّاب مدرسة "البستان" جمعوا 600,000 أغورة مقابل<br>الزجاجات التي جمعوها.</p>
+    <p class="q-body">ما هو مبلغ المال بالشيكل الذي جمعه طلّاب المدرسة؟</p>
+    <p class="q-instruction">اكتبوا الحلّ في الخانة:</p>
+    <p class="q-answer-line"><input class="num-input" type="text" inputmode="numeric" data-answer="6000" aria-label="عدد الشواكل"> شيكل.</p>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>كل 100 أغورة تساوي شيكلًا واحدًا.</p><p>يجب قسمة عدد الأغورات على 100 لإيجاد عدد الشواكل.</p><p>الحساب هو: <span class="eq">600,000 : 100 = 6,000</span></p><p>600,000 أغورة تساوي 6,000 شيكل.</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>كل 100 أغورة تساوي شيكلًا واحدًا.</p><p>يجب قسمة عدد الأغورات على 100 لإيجاد عدد الشواكل.</p><p>الحساب هو: <span class="eq">600,000 : 100 = 6,000</span></p><p>600,000 أغورة تساوي 6,000 شيكل.</p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 11 — סרטון: יעד 90,000 בקבוקים (שקף 17) ================= -->
+<section class="screen" data-screen="11" data-sid="video-goal" data-type="video" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-council-room.jpg" alt="" loading="lazy">
+  <div class="video-wrap">
+    <video class="video-el" poster="assets/images/bg-council-room.jpg" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noremoteplayback nofullscreen noplaybackrate"><source src="assets/videos/video-goal.mp4#t=0.001" type="video/mp4"></video>
+    <div class="vcap-src" data-clear-after="26.76" hidden>
+      <span data-t="0.49" data-end="2.372">حساباتكم ممتازة!</span>
+      <span data-t="2.412" data-end="7.404">نملك الآن بضعة آلاف من الشواكل
+في الصندوق، لكن من أجل بناء زاوية جلوس لائقة،</span>
+      <span data-t="7.444" data-end="12.437">حدَّد مجلس الطلّاب هدفًا بِجمع
+90 ألف زجاجة حتى نهاية العام الدراسي!</span>
+      <span data-t="12.5" data-end="14.45">90 ألفًا؟ هذا عدد هائل!</span>
+      <span data-t="14.85" data-end="17.99">كيف نعرف إن كنّا في الاتجاه الصّحيح
+وما زلنا في الأشهر الثلاثة الأولى؟</span>
+      <span data-t="18.5" data-end="21.38">لا حاجة لحساب كل شيكل بدقّة من البداية.</span>
+      <span data-t="21.93" data-end="26.76">بدايةً، هيّا نجري تقديرًا
+كي نرى ما إذا جمعنا ثُلث الكميّة المطلوبة تقريبًا.</span>
+    </div>
+    <div class="video-caption hidden"><p></p></div>
+    <button class="play-btn-big" type="button" aria-label="تشغيل الفيديو"></button>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 12 — שאלה 5: אומדן (שקפים 18-19) ================= -->
+<section class="screen" data-screen="12" data-sid="q5" data-type="question" data-kind="single" data-weight="12.5" data-step="5" data-arrow-after-hear tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-room-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q5-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q5-help" role="dialog" aria-label="مساعدة" hidden><p><strong>تلميح:</strong> أوجدوا عدد الزجاجات التي تساوي ثلث الهدف السنوي.</p><p>انتبهوا إلى كمية الزجاجات التقريبية التي جُمعت في الشهر الأول والثالث معًا.</p><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 5</h2>
+    <p class="q-body">يريد مجلس الطلّاب جمع 90,000 زجاجة حتى نهاية العام (خلال 10 أشهر دراسية).</p>
+    <p class="q-body">توجّه الممثلون إلى سكّان الحي لطلب المساعدة في جمع الزجاجات.</p>
+    <p class="q-body">سعد سكّان الحي بتقديم المساعدة وأحضروا إلى المدرسة زجاجات كثيرة!</p>
+    <p class="q-body">جُمعت الكميات التالية من طلّاب المدرسة وسكّان الحي في الأشهر الثلاثة الأولى:</p>
+    <ul class="q-list">
+      <li>الشهر الأول: 14,800 زجاجة</li>
+      <li>الشهر الثاني: 10,410 زجاجة</li>
+      <li>الشهر الثالث: 15,280 زجاجة</li>
+    </ul>
+    <p class="q-instruction">اختاروا الإجابة المناسبة دون إجراء حساب دقيق.</p>
+    <p class="q-answer-line">جمع الطلّاب حتى الآن
+      <span class="q-answers q-inline" role="radiogroup" aria-label="اختيار الإجابة"><span class="q-opt" data-id="1" data-correct role="radio" tabindex="0" aria-checked="false">أكثر من</span><span class="q-opt" data-id="2" role="radio" tabindex="0" aria-checked="false">أقل من</span><span class="q-opt" data-id="3" role="radio" tabindex="0" aria-checked="false">بالضبط</span></span>
+      ثلث هدفهم السنوي.</p>
+    <label class="q-explain-label" for="q5-explain">اشرحوا كيف أجريتم التقدير:</label>
+    <textarea class="q-explain" id="q5-explain" rows="3"></textarea>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى. يمكنكم النقر على زر المساعدة للحصول على تلميح.</p></div>
+    <div data-fb="correct"><p class="fb-t"></p><p>جمع الطلّاب <strong>أكثر</strong> من ثلث الهدف السنوي.</p><p>جُمع أكثر من 10,000 زجاجة في كل شهر من الأشهر الثلاثة، لذلك جُمع في المجموع أكثر من 30,000 زجاجة.</p><p>30,000 هي ثلث (<span class="eq"><span class="frac"><span>1</span><span>3</span></span></span>) من 90,000، لذلك يمكن الجزم بأنه جُمع أكثر من ثلث هذه الكمية.</p><div class="numline" dir="ltr" role="img" aria-label="محور أعداد من 0 إلى 90,000؛ ثلث الهدف (30,000) معلّم بعلم"><div class="nl-bar"><span class="nl-fill"></span><span class="nl-flag"></span></div><div class="nl-ticks"><span>0</span><span class="nl-hi">30,000</span><span>60,000</span><span>90,000</span></div></div></div>
+    <div data-fb="wrong2"><p class="fb-t"></p><p>جمع الطلّاب <strong>أكثر</strong> من ثلث الهدف السنوي.</p><p>جُمع أكثر من 10,000 زجاجة في كل شهر من الأشهر الثلاثة، لذلك جُمع في المجموع أكثر من 30,000 زجاجة.</p><p>30,000 هي ثلث (<span class="eq"><span class="frac"><span>1</span><span>3</span></span></span>) من 90,000، لذلك يمكن الجزم بأنه جُمع أكثر من ثلث هذه الكمية.</p><div class="numline" dir="ltr" role="img" aria-label="محور أعداد من 0 إلى 90,000؛ ثلث الهدف (30,000) معلّم بعلم"><div class="nl-bar"><span class="nl-fill"></span><span class="nl-flag"></span></div><div class="nl-ticks"><span>0</span><span class="nl-hi">30,000</span><span>60,000</span><span>90,000</span></div></div></div>
+  </div>
+  <div class="hear-more" hidden>
+    <img class="hear-kid" src="assets/images/char-girl.png" alt="">
+    <audio class="hear-audio" src="assets/audio/screen12.mp3" preload="auto"></audio>
+    <div class="hear-bubble"><p>خطرت لي فكرة لشرح إضافي!</p><button class="btn-dark hear-btn" type="button">أريد أن أسمع!</button></div>
+    <div class="hear-panel" hidden>
+      <p>يمكن تقريب عدد الزجاجات في كل شهر إلى الآلاف لتقدير عدد الزجاجات التي جُمعت:</p>
+      <p>نقرّب 14,800 إلى 15,000.</p>
+      <p>نقرّب 10,410 إلى 10,000.</p>
+      <p>نقرّب 15,280 إلى 15,000.</p>
+      <p>نحسب: <span class="eq">15,000 + 10,000 + 15,000</span></p>
+      <p>جُمع نحو 40,000 زجاجة في المجموع حسب التقدير، أي أكثر من ثلث 90,000 زجاجة.</p>
+      <button class="btn-dark hear-back" type="button">العودة إلى التغذية الراجعة</button>
+    </div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 13 — שאלה 6, סעיף א': קריאת דיאגרמה (שקפים 20-21) ================= -->
+<section class="screen" data-screen="13" data-sid="q6a" data-type="question" data-kind="single" data-weight="6.25" data-step="6" data-no-my-answer tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-room-dim.jpg" alt="" loading="lazy">
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 6، بند أ</h2>
+    <p class="q-body">يعرض المخطّط أمامكم العدد المقرَّب للزجاجات التي جُمعَت في الطبقات من الأول حتى السّادس في المدرسة خلال الأشهر الثلاثة الأخيرة من المشروع:</p>
+    <p class="q-body">أيُّ الطبقات جمعت أكبر كمية من الزجاجات؟</p>
+    <p class="q-instruction">اختاروا الإجابة الصحيحة:</p>
+    <div class="q-answers" role="radiogroup" aria-label="خيارات الإجابة">
+      <div class="q-opt" data-id="1" role="radio" tabindex="0" aria-checked="false"><span class="q-mark"></span>طبقة الأوائل والثواني</div>
+      <div class="q-opt" data-id="2" data-correct role="radio" tabindex="0" aria-checked="false"><span class="q-mark"></span>طبقة الثوالث والروابع</div>
+      <div class="q-opt" data-id="3" role="radio" tabindex="0" aria-checked="false"><span class="q-mark"></span>طبقة الخوامس والسوادس</div>
+    </div>
+    <figure class="bar-chart" dir="ltr" data-max="12000" data-ticks="1000">
+      <div class="bar-row"><span class="bar-label">طبقة الأوائل والثواني</span><span class="bar-track"><span class="bar" data-value="7500"></span></span></div>
+      <div class="bar-row"><span class="bar-label">طبقة الثوالث والروابع</span><span class="bar-track"><span class="bar" data-value="10000"></span></span></div>
+      <div class="bar-row"><span class="bar-label">طبقة الخوامس والسوادس</span><span class="bar-track"><span class="bar" data-value="8000"></span></span></div>
+      <div class="bar-axis" aria-hidden="true"></div>
+      <figcaption class="bar-axis-title">عدد الزجاجات التي جُمعَت</figcaption>
+    </figure>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>جمع طلّاب طبقة الثوالث والروابع معًا أكبر عدد من الزجاجات حسب المخطّط - 10,000 زجاجة.</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>جمع طلّاب طبقة الثوالث والروابع معًا أكبر عدد من الزجاجات حسب المخطّط - 10,000 زجاجة.</p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 14 — שאלה 6, סעיף ב': סרטוט מלבן (שקפים 22-23) ================= -->
+<section class="screen" data-screen="14" data-sid="q6b" data-type="question" data-kind="draw" data-weight="6.25" data-step="6" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-room-dim.jpg" alt="" loading="lazy">
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 6، بند ب</h2>
+    <p class="q-body">جمع سكّان الحي في الأشهر الثلاثة الأخيرة عددًا من الزجاجات يساوي ما جمعه جميع طلّاب المدرسة في الفترة نفسها.</p>
+    <p class="q-body">أضيفوا مستطيلًا مناسبًا لعدد الزجاجات التي جمعها سكّان الحي.</p>
+    <p class="q-instruction">انقروا على السهم وجرّوا الفأرة لرسم المستطيل المناسب.</p>
+    <figure class="bar-chart draw-chart" dir="ltr" data-max="30000" data-ticks="1000" data-label-every="5000" data-step="500" data-answer="25500">
+      <div class="bar-row"><span class="bar-label">طبقة الأوائل والثواني</span><span class="bar-track"><span class="bar" data-value="7500"><span class="bar-num">7,500</span></span></span></div>
+      <div class="bar-row"><span class="bar-label">طبقة الثوالث والروابع</span><span class="bar-track"><span class="bar" data-value="10000"><span class="bar-num">10,000</span></span></span></div>
+      <div class="bar-row"><span class="bar-label">طبقة الخوامس والسوادس</span><span class="bar-track"><span class="bar" data-value="8000"><span class="bar-num">8,000</span></span></span></div>
+      <div class="bar-row draw-row"><span class="bar-label">سكّان الحي</span><span class="bar-track draw-track" role="slider" tabindex="0" aria-label="مستطيل لسكّان الحي — جرّوا أو استخدموا الأسهم"><span class="bar draw-bar"><span class="draw-handle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h13M12 6l6 6-6 6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="draw-hval" aria-hidden="true"></span><span class="draw-hint" aria-hidden="true"></span></span></span><span class="draw-value" aria-hidden="true"></span></div>
+      <div class="bar-axis" aria-hidden="true"></div>
+      <figcaption class="bar-axis-title">عدد الزجاجات التي جُمعَت</figcaption>
+    </figure>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>نحسب عدد الزجاجات التي جمعها جميع طلّاب المدرسة:</p><p><span class="eq">7,500 + 10,000 + 8,000 = 25,500</span></p><p>عدد الزجاجات التي جمعها سكّان الحي هو: 25,500</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>نحسب عدد الزجاجات التي جمعها جميع طلّاب المدرسة:</p><p><span class="eq">7,500 + 10,000 + 8,000 = 25,500</span></p><p>عدد الزجاجات التي جمعها سكّان الحي هو: 25,500</p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 15 — הפתעה: מכתב מראש העיר (שקף 24) ================= -->
+<section class="screen" data-screen="15" data-sid="letter-intro" data-type="explain" data-arrow-delay="12.5" tabindex="-1">
+  <video class="screen-bg screen-anim" src="assets/videos/letter-intro.mp4" poster="assets/images/letter-intro-first.jpg" muted playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-hidden="true"></video>
+  <audio class="narration" src="assets/audio/screen16.mp3" preload="auto"></audio>
+  <button class="narr-btn" type="button" aria-label="تشغيل السرد الصوتي" aria-pressed="false"></button>
+  <div class="narration-banner"><p class="reveal" data-at="0">كانت بانتظار أعضاء مجلس الطلّاب مفاجأة!</p><p class="reveal" data-at="3.1">أرسل رئيس البلدية إليهم رسالة بعد حملة جمع الزجاجات.</p><p class="reveal" data-at="7.7">اجتمع الأصدقاء الثلاثة في ممر المدرسة ليقرؤوه معًا...</p></div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 16 — מכתב ראש העיר (שקף 25) ================= -->
+<section class="screen" data-screen="16" data-sid="letter" data-type="explain" data-arrow-delay="22.2" tabindex="-1">
+  <img class="screen-bg" src="assets/images/letter-bg.jpg" alt="" loading="lazy">
+  <audio class="narration" src="assets/audio/screen17.mp3" preload="auto"></audio>
+  <button class="narr-btn" type="button" aria-label="تشغيل السرد الصوتي" aria-pressed="false"></button>
+  <div class="letter-text">
+    <p>أعضاء مجلس الطلّاب الأعزاء،</p>
+    <p>مبادرتكم تثبت أنه يمكن الحفاظ على البيئة وإحداث تغيير حقيقي في المجتمع في آن واحد، كل الاحترام لكم!</p>
+    <p>قررت، لمساعدتكم على تحقيق الحلم، أن أمنحكم <strong>منحة بلدية خاصة عن كل 10,000 زجاجة تجمعونها!</strong></p>
+    <p>واصلوا هذا العمل المبارك!</p>
+    <p>مع التحيات،<br>رئيس البلدية</p>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 17 — שאלה 7: גרירת מספרים לתרגיל (שקפים 26-27) ================= -->
+<section class="screen" data-screen="17" data-sid="q7" data-type="question" data-kind="dnd" data-dnd-mode="copy" data-mark-attempts data-slot-marks data-reveal-delay="3" data-weight="12.5" data-step="7" tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-garden-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q7-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q7-help" role="dialog" aria-label="مساعدة" hidden><p><strong>تلميح:</strong></p><p>يجب حساب مبلغ المال الذي يحصل عليه الطلّاب مقابل 10,000 زجاجة ثم إضافة المكافأة.</p><p>لا تنسوا تحويل رسوم الإيداع من أغورات إلى شواكل.</p><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 7</h2>
+    <p class="q-body">يدعو رئيس البلدية جميع المدارس في المدينة إلى الانضمام إلى مشروع جديد لإعادة تدوير الزجاجات في مدارس المدينة!</p>
+    <p class="q-body">تُدفع 30 أغورة رسوم إيداع عن كل زجاجة تُسلَّم لإعادة التدوير.</p>
+    <p class="q-body">ستمنح البلدية مكافأة إضافية: 500 شيكل عن كل 10,000 زجاجة تُجمع.</p>
+    <p class="q-body">احسبوا كم شيكلًا حصل عليه الطلّاب في المجموع مقابل 10,000 زجاجة، شاملةً المكافأة.</p>
+    <p class="q-instruction">ضعوا أعدادًا في الأماكن المناسبة من بين الأعداد التّالية.</p>
+    <p class="q-instruction">(انتبهوا، بعض الأعداد فقط مناسبة).</p>
+    <p class="q-equation"><span class="eq"><span class="dnd-slot" data-accept="c3" data-group="factors" role="button" tabindex="0" aria-label="مكان فارغ 1"></span> × <span class="dnd-slot" data-accept="c8" data-group="factors" role="button" tabindex="0" aria-label="مكان فارغ 2"></span> : <span class="dnd-slot" data-accept="c7" role="button" tabindex="0" aria-label="مكان فارغ 3"></span> + <span class="dnd-slot" data-accept="c5" role="button" tabindex="0" aria-label="مكان فارغ 4"></span> = <span class="dnd-slot" data-accept="c1" role="button" tabindex="0" aria-label="مكان فارغ 5"></span></span></p>
+    <div class="dnd-bank" aria-label="مخزن الأعداد">
+      <button class="dnd-chip" type="button" data-chip="c1" data-order="1">3,500</button>
+      <button class="dnd-chip" type="button" data-chip="c2" data-order="2">100,000</button>
+      <button class="dnd-chip" type="button" data-chip="c3" data-order="3">10,000</button>
+      <button class="dnd-chip" type="button" data-chip="c4" data-order="4">1,000</button>
+      <button class="dnd-chip" type="button" data-chip="c5" data-order="5">500</button>
+      <button class="dnd-chip" type="button" data-chip="c6" data-order="6">200</button>
+      <button class="dnd-chip" type="button" data-chip="c7" data-order="7">100</button>
+      <button class="dnd-chip" type="button" data-chip="c8" data-order="8">30</button>
+    </div>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>نحسب أولًا مبلغ المال الذي يحصل عليه الطلّاب مقابل الزجاجات بالشواكل، ثم نضيف المكافأة:</p><p><span class="eq">10,000 × 30 : 100 + 500 = 3,500</span></p><p>حصل الطلّاب في المجموع على 3,500 شيكل.</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>نحسب أولًا مبلغ المال الذي يحصل عليه الطلّاب مقابل الزجاجات بالشواكل، ثم نضيف المكافأة:</p><p><span class="eq">10,000 × 30 : 100 + 500 = 3,500</span></p><p>حصل الطلّاب في المجموع على 3,500 شيكل.</p></div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 18 — שאלה 8: סכום כולל בשקלים (שקפים 28-29) ================= -->
+<section class="screen" data-screen="18" data-sid="q8" data-type="question" data-kind="input" data-weight="12.5" data-step="8" data-arrow-after-hear tabindex="-1">
+  <img class="screen-bg" src="assets/images/bg-garden-dim.jpg" alt="" loading="lazy">
+  <button class="help-btn pop-toggle" type="button" aria-controls="q8-help" aria-expanded="false">مساعدة</button>
+  <div class="pop help-pop" id="q8-help" role="dialog" aria-label="مساعدة" hidden><p><strong>مساعدة:</strong></p><p>رأينا في السؤال السابق أن الطلّاب يحصلون على 3,500 شيكل مقابل 10,000 زجاجة، شاملةً المكافأة. كم مرة "يدخل" 10,000 في 150,000؟</p><button class="pop-close" type="button" aria-label="إغلاق">✕</button></div>
+  <div class="q-card">
+    <h2 class="q-title">السؤال رقم 8</h2>
+    <p class="q-body">تبيّن في نهاية العام أن الطلّاب في المدرسة، مع سكّان الحي، جمعوا في المجموع 150,000 زجاجة!</p>
+    <p class="q-body"><strong>تذكير:</strong></p>
+    <p class="q-body">تُدفع 30 أغورة رسوم إيداع عن كل زجاجة تُسلَّم لإعادة التدوير.</p>
+    <p class="q-body">تضيف البلدية 500 شيكل عن كل 10,000 زجاجة.</p>
+    <p class="q-instruction">احسبوا المبلغ الإجمالي بالشواكل الذي سيُحوَّل إلى المشروع (رسوم الإيداع + مكافأة البلدية).</p>
+    <p class="q-instruction">استعينوا بحل السؤال السابق واكتبوا إجابتكم:</p>
+    <p class="q-answer-line q8-answer"><input class="num-input" type="text" inputmode="numeric" data-answer="52500" aria-label="المبلغ بالشواكل"> <span>شيكل.</span></p>
+  </div>
+  <button class="btn-check" type="button" disabled>هل إجابتي صحيحة؟</button>
+  <div class="fb-src" hidden>
+    <div data-fb="retry"><p class="fb-t">هذه ليست الإجابة، حاولوا مرّة أخرى.</p></div>
+    <div data-fb="correct"><p class="fb-t">إجابة صحيحة</p><p>طريقة حلّ ممكنة:</p><p>وجدنا في السؤال السابق أن الطلّاب يحصلون على 3,500 شيكل مقابل كل 10,000 زجاجة، شاملةً مكافأة البلدية.</p><p>عدد الزجاجات التي جُمعَت هو 150,000،</p><p>150,000 زجاجة تساوي 15 مرة 10,000.</p><p>يجب ضرب 3,500 في 15 للحصول على رسوم الإيداع عن الزجاجات والمكافأة.</p><p><span class="eq">15 x 3,500 = 10 x 3,500 + 5 x 3,500 = 52,500</span></p><p>المبلغ الذي جمعه الطلّاب شاملًا المكافأة هو 52,500 شيكل</p></div>
+    <div data-fb="wrong2"><p class="fb-t">إجابة خاطئة</p><p>طريقة حلّ ممكنة:</p><p>وجدنا في السؤال السابق أن الطلّاب يحصلون على 3,500 شيكل مقابل كل 10,000 زجاجة، شاملةً مكافأة البلدية.</p><p>عدد الزجاجات التي جُمعَت هو 150,000،</p><p>150,000 زجاجة تساوي 15 مرة 10,000.</p><p>يجب ضرب 3,500 في 15 للحصول على رسوم الإيداع عن الزجاجات والمكافأة.</p><p><span class="eq">15 x 3,500 = 10 x 3,500 + 5 x 3,500 = 52,500</span></p><p>المبلغ الذي جمعه الطلّاب شاملًا المكافأة هو 52,500 شيكل</p></div>
+  </div>
+  <div class="hear-more" hidden>
+    <img class="hear-kid" src="assets/images/char-boy-navy.png" alt="">
+    <audio class="hear-audio" src="assets/audio/screen18.mp3" preload="auto"></audio>
+    <div class="hear-bubble"><p>مرحبًا، خطرت لي فكرة أخرى للحل!</p><button class="btn-dark hear-btn" type="button">أريد أن أسمع!</button></div>
+    <div class="hear-panel" hidden>
+      <p>حسبت أولًا رسوم الإيداع بالأغورات:</p>
+      <p><span class="eq">150,000 × 30 = 4,500,000</span></p>
+      <p>قسّمت على 100 لأجد المبلغ بالشواكل</p>
+      <p><span class="eq">4,500,000 : 100 = 45,000</span></p>
+      <p>رسوم الإيداع بالشواكل هي: 45,000</p>
+      <p>حسبت بعد ذلك مكافأة البلدية:</p>
+      <p>150,000 زجاجة تساوي 15 مرة 10,000 زجاجة.</p>
+      <p>المكافأة هي:</p>
+      <p><span class="eq">15 × 500 = 7,500</span></p>
+      <p>المكافأة في المجموع هي 7,500 شيكل.</p>
+      <p>جمعت في النهاية رسوم الإيداع بالشواكل مع المكافأة:</p>
+      <p><span class="eq">45,000 + 7,500 = 52,500</span></p>
+      <p>هذا يعني أنه سيُحوَّل إلى المشروع 52,500 شيكل بالمجموع!</p>
+      <button class="btn-dark hear-back" type="button">العودة إلى التغذية الراجعة</button>
+    </div>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <button class="nav-btn nav-next hidden" type="button" aria-label="التالي"></button>
+</section>
+
+<!-- ================= SCREEN 19 — סרטון סיום: פינת הישיבה (שקף 30) ================= -->
+<section class="screen" data-screen="19" data-sid="video-end" data-type="video" tabindex="-1">
+  <img class="screen-bg" src="assets/images/video-end-poster.jpg" alt="" loading="lazy">
+  <div class="video-wrap">
+    <video class="video-el" poster="assets/images/video-end-poster.jpg" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noremoteplayback nofullscreen noplaybackrate"><source src="assets/videos/video-end.mp4#t=0.001" type="video/mp4"></video>
+    <div class="vcap-src" data-clear-after="16.2" hidden>
+      <span data-t="4.01" data-end="8.292">لقد فعلناها! أصبح الآن هذا المكان
+أجمل زاوية جلوس في المدرسة.</span>
+      <span data-t="8.332" data-end="11.786">الفضل كله لإعادة التدوير وتفكيركم الرياضي.</span>
+      <span data-t="11.826" data-end="16.2">تمامًا! سنبحث الآن عن مشروع جديد
+استعدادًا للسنة القادمة.</span>
+    </div>
+    <div class="video-caption hidden"><p></p></div>
+    <button class="play-btn-big" type="button" aria-label="تشغيل الفيديو"></button>
+  </div>
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+  <!-- This button starts the ending: it goes to the finish screen (20), where the score pop-up opens at once (script.js: enterFinish) -->
+  <button class="nav-btn nav-next done-btn hidden" type="button" data-action="finish">انتهيت</button>
+</section>
+
+<!-- ================= SCREEN 20 — סיום: ציון (שקף 31) — the picture only; the score pop-up and the dark screen are #final-score / #final-return below ================= -->
+<section class="screen" data-screen="20" data-sid="finish" data-type="finish" tabindex="-1">
+  <img class="screen-bg" src="assets/images/finish-bg.jpg" alt="" loading="lazy">
+  <button class="nav-btn nav-prev" type="button" aria-label="العودة"></button>
+</section>
+
+<!-- ================= Global elements (outside every screen) ================= -->
+<!-- The end of the lomda (script.js: showFinalScore / showReturnScreen). The score pop-up opens over the finish
+     picture; its X shows the dark screen that sends the learner back to the Moodle. The wording is the approved
+     house text; "העמוד הבא" has to be the label of the Moodle quiz's next-page button. -->
+<div id="final-score" role="dialog" aria-modal="true" aria-labelledby="final-score-title" tabindex="-1" hidden>
+  <div class="final-score-card">
+    <button class="final-score-close" type="button" aria-label="إغلاق"></button>
+    <h1 id="final-score-title">كلّ الاحترام، أنهيت المهمّة!</h1>
+    <p class="final-score-value">علامتك هي <bdi data-final-grade>0</bdi></p>
+    <p class="final-score-hint">يجب إغلاق المهمّة من خلال الضغط على X</p>
+  </div>
+</div>
+<div id="final-return" role="dialog" aria-modal="true" aria-labelledby="final-return-text" tabindex="-1" hidden>
+  <p id="final-return-text">الآن، عودوا إلى النموذج،<br>اضغطوا على زرّ "الصفحة التالية"<br>وأجيبوا عن الأسئلة.</p>
+</div>
+
+<div id="q-stepper" class="q-stepper" aria-hidden="true"></div>
+
+<div id="feedback-popup" role="alertdialog" aria-labelledby="fb-title" tabindex="-1">
+  <div class="fb-title-row"><span class="fb-icon" aria-hidden="true"></span><div class="fb-title" id="fb-title"></div></div>
+  <div class="fb-body" id="fb-body"></div>
+  <button class="fb-mine" id="fb-mine" type="button" hidden>إجابتي</button>
+</div>
+
+<div id="img-zoom-modal" role="dialog" aria-modal="true" aria-label="عرض مكبّر" tabindex="-1">
+  <div class="img-zoom-panel">
+    <button class="img-zoom-close" type="button" data-zoom-close aria-label="إغلاق">✕</button>
+    <div id="img-zoom-body"></div>
+  </div>
+</div>
+
+<div id="reopen-popup" role="dialog" aria-modal="true" aria-label="إعادة العرض" tabindex="-1">
+  <div id="reopen-popup-body"></div>
+</div>
+
+<div id="a11y-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Engine strings for screen readers — kept here so they are translated with everything else. -->
+<div id="ui-text" hidden>
+  <span data-key="dnd-picked">تم الاختيار. اختاروا مكانًا فارغًا واضغطوا Enter.</span>
+  <span data-key="dnd-placed">وُضع في المكان.</span>
+</div>
+
+<!-- Video control bar, copied into every .video-wrap by script.js -->
+<template id="vctrls-tpl">
+  <div class="vctrls" dir="ltr">
+    <button class="vc-btn" type="button" data-play aria-label="تشغيل أو إيقاف مؤقت">▶</button>
+    <span class="vc-time" data-cur>0:00</span>
+    <input class="vc-seek" type="range" min="0" max="1000" value="0" step="1" data-seek aria-label="شريط التقدّم">
+    <span class="vc-time" data-dur>0:00</span>
+    <button class="vc-btn vc-cc" type="button" data-cc aria-pressed="true" aria-label="الترجمة النصّية">CC</button>
+    <button class="vc-btn" type="button" data-mute aria-pressed="false" aria-label="كتم الصوت">🔊</button>
+    <input class="vc-vol" type="range" min="0" max="100" value="100" step="1" data-vol aria-label="مستوى الصوت">
+    <button class="vc-btn" type="button" data-full aria-pressed="false" aria-label="شاشة كاملة">⛶</button>
+  </div>
+</template>
+
+</div><!-- /#app -->
+<script src="script.js"></script>
+</body>
+</html>

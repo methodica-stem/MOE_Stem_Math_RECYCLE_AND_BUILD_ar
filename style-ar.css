@@ -1,0 +1,134 @@
+/* ============================================================
+   style-ar.css — Arabic build layout overrides.
+   Loaded AFTER styles.css, which stays byte-identical to the
+   Hebrew build so any future Hebrew fix copies straight across.
+   Typeface lives in fonts-ar.css. Every override says which
+   screen it is for and what was measured.
+   ============================================================ */
+
+/* ── Orphans ──────────────────────────────────────────────────
+   Arabic's longer words leave a lone word on a last line more often
+   than Hebrew did (screen 3: "ونبني" alone). text-wrap:pretty asks the
+   browser to rebalance the closing lines; no change to size or box. */
+p, .q-body, .q-instruction, .fb-body p { text-wrap: pretty; }
+
+/* ── Help button (every question) ─────────────────────────────
+   The Hebrew label עזרה (4 letters) is 36px bold inside a 120px round
+   button whose dark face is about 100px. "مساعدة" at 36px is wider than
+   the face and ran over its rim on all 8 questions. Same weight, smaller
+   size, no wrapping.                                                   */
+.help-btn { font-size: 25px; white-space: nowrap; letter-spacing: 0; }
+
+/* ── Q2 table: row labels on one line ─────────────────────────
+   "الصف الخامس" wrapped to two lines in the 170px label column, making
+   every row taller than the Hebrew "שכבה ה". Widen that column by 60px
+   out of the third (numbers) column, and keep the label on one line.   */
+[data-sid="q2"] .data-table tbody th { white-space: nowrap; }
+[data-sid="q2"] .data-table th:nth-child(1) { width: 230px; }
+
+/* ── Q6a: answers and chart labels on fewer lines ─────────────
+   Each answer ("الصفان الخامس والسادس") wrapped to two lines in the
+   260px answers column, pushing the last answer down under the retry
+   panel (feedback_qa: covering text 3x, blocking a control). The card
+   has the room: widen the column. The chart's labels took three lines
+   at 37px; 30px in a wider label column takes two.                    */
+[data-sid="q6a"] .q-answers { width: 470px; }
+[data-sid="q6a"] .q-opt { white-space: nowrap; }
+[data-sid="q6a"] .bar-label { font-size: 30px; flex-basis: 250px; }
+[data-sid="q6a"] .bar-axis, [data-sid="q6a"] .bar-axis-title { margin-left: 250px; }
+
+/* ── Retry panels must stay clear of the check button ─────────
+   The Hebrew retry message is one short line, so the panel (auto width)
+   ends before the check button at x 1520. The Arabic sentence is longer
+   and the panel grew over the button on Q6a/Q6b. Cap the width so it
+   wraps to two lines and stops short of the button. Scoped to .retry
+   only: the final outcome panels keep their own geometry.             */
+#feedback-popup.fb-q6a.retry { max-width: 365px; }
+#feedback-popup.fb-q6b.retry { max-width: 420px; }
+
+/* ── Q6b final panel: 16px below the instruction ──────────────
+   The instruction now wraps to three lines, so the final panel (top 620)
+   started 9px under its last line (feedback_qa "crowding"). Moved down
+   14px; final outcomes only, the retry panel keeps its own place.     */
+#feedback-popup.fb-q6b:not(.retry):not(.retryPartial) { top: 634px; }
+
+/* ── Text on the explain screens: as large as fits (reviewer, 2026-11-11) ──
+   The Hebrew text is 34px lomda-wide (developer). Almarai's letters are smaller than Assistant's at the same
+   size, so the Arabic read small. Sizes below are the largest that stay inside the box without covering the
+   characters, the narration button or the arrows; measured on the finished (fully revealed) screens.        */
+[data-sid="dream"] .dream-banner { font-size: 62px; line-height: 1.3; width: 1340px; padding: 28px 30px 40px; text-wrap: balance; }   /* ends left of the narration button (left 1640) */
+[data-sid="project"] .text-panel { font-size: 44px; line-height: 1.3; }
+[data-sid="deposit-value"] .text-panel { font-size: 42px; line-height: 1.3; }
+[data-sid="letter-intro"] .narration-banner { font-size: 46px; line-height: 1.3; }
+[data-sid="letter"] .letter-text { font-size: 40px; }
+
+/* ── Screen 4 poll: the answers were cut off by their own box ───────────
+   Side by side, each answer had half of a narrow panel: "نعم، سبق أن أعدت تدوير الزجاجات!" took four lines and
+   ran out of the 100px box above and below. Stacked, each answer has the full width. */
+[data-sid="deposit-value"] .poll-q { font-size: 42px; }
+[data-sid="deposit-value"] .poll-opts { flex-direction: column; gap: 14px; }
+[data-sid="deposit-value"] .poll-opt { min-height: 112px; font-size: 40px; border: 3px solid var(--chip-border); border-radius: 18px; }
+[data-sid="deposit-value"] .poll-opt:first-child, [data-sid="deposit-value"] .poll-opt:last-child { border-radius: 18px; border: 3px solid var(--chip-border); }
+
+/* ── Check button ("هل إجابتي صحيحة؟"), every question ─────────────────
+   Hebrew "צדקתי?" is one short word at 42px in a 187x115 chalkboard. The Arabic sentence wrapped to two lines
+   and ran over the chalk frame. Larger board, smaller type, one line. It grows to the right of its place
+   (left stays), into free space on every question.                                                       */
+.btn-check { width: 330px; height: 118px; font-size: 33px; white-space: nowrap; padding: 0 0 4px; }
+
+
+/* ── The wider check button must not reach the answer box ─────────────
+   Hebrew button: 187px wide, ends 32px short of the answer box (x 1279) on Q3/Q4 and 42px short on Q8.
+   At 330px it covered the unit label ("أغورة", "شيكل"). Moved left so its right edge sits where the Hebrew one
+   ended (measured: Q3/Q4 right edge 1247, Q8 right edge 1427).                                               */
+[data-sid="q3"] .btn-check, [data-sid="q4"] .btn-check { left: 917px; }
+[data-sid="q8"] .btn-check { left: 1097px; }
+
+/* ── Retry panels beside the wider check button ───────────────────────
+   Q5's retry panel sits right of the check button (Hebrew: button ends at 377, panel starts at 420) and
+   Q8's sits left of it. The button is 143px wider, so Q5's panel moves right by as much and Q8's is
+   capped so it ends before the button (feedback_qa "blocking a control" was 0 for both in the Hebrew). */
+#feedback-popup.fb-q5.retry { left: 563px; }
+#feedback-popup.fb-q8.retry { max-width: 430px; }
+
+/* ── Screen 3: the panel along the top edge, clear of the boy's face (reviewer, 2026-11-12) ───────────
+   At 44px in a 1340px panel the two paragraphs took five lines and the panel came down over the face of the boy
+   on the right (his head is at x 1120-1300, y 183-322 in the picture). Stretched along the top edge instead (from
+   x 120 to the right edge), 38px, with a tighter top and bottom, the three lines end above his head.      */
+[data-sid="project"] .text-panel { left: 120px; top: -50px; padding: 68px 125px 24px 50px; font-size: 38px; line-height: 1.3; }
+[data-sid="project"] .narr-btn { left: 30px; top: 24px; }
+
+/* ── Question text a little larger (reviewer, 2026-11-12) ─────────────────────────────────────────────
+   The question prompts, instructions and answer options: 34px -> 38px (Almarai reads smaller than the Hebrew
+   Assistant at the same size). Tables, chips and equations keep their own sizes; feedback text is unchanged.     */
+.q-title, .q-body, .q-instruction, .q-answer-line, .q-list, .q-explain-label,
+[data-sid] .q-body, [data-sid] .q-instruction, [data-sid] .q-list, [data-sid] .q-answer-line, [data-sid] .q-explain-label,
+.q-opt, [data-sid] .q-opt, .q-inline .q-opt, [data-sid="q5"] .q-inline .q-opt { font-size: 38px; }
+
+/* ── Final feedback panels clear of the question (reviewer, 2026-11-12) ───────────────────────────────
+   With the larger question text the final panels of Q1, Q2, Q6a, Q6b, Q7 and Q8 reached over the text, an answer or
+   the equation (feedback_qa "covering screen text" / "crowding"). Each is moved into the free space measured on the
+   screen (tools/fbprobe.py: content rectangles vs the panel), 16px clear of the content and of the card's edge.
+   Final outcomes only: the retry panels keep their own places. Q5 is the exception: its card is full of question
+   (text, months, answers, explanation box) and has no room for a panel; it stays over the text (draggable).      */
+#feedback-popup.fb-q1:not(.retry):not(.retryPartial) { left: 181px; top: 706px; bottom: auto; }
+#feedback-popup.fb-q1:not(.retry):not(.retryPartial) .fb-body p { line-height: 1.2; }
+#feedback-popup.fb-q2:not(.retry):not(.retryPartial) { left: 1070px; top: 743px; bottom: auto; width: 690px; }
+#feedback-popup.fb-q2:not(.retry):not(.retryPartial) .fb-body p { font-size: 30px; line-height: 1.2; }
+#feedback-popup.fb-q6a:not(.retry):not(.retryPartial) { top: 728px; }
+#feedback-popup.fb-q6b:not(.retry):not(.retryPartial) { top: 684px; }
+#feedback-popup.fb-q7:not(.retry):not(.retryPartial) { top: 668px; }
+/* Q8 (reviewer, QA pin #27, 2026-11-17): at x 181 the panel ran over the "I want to hear" boy (x 162-470) and he hid the start of the lines.
+   Same left edge as the Hebrew (480), 16px clear of the boy and of the answer box (x 1469); the type is a little smaller to keep it inside the card. */
+#feedback-popup.fb-q8:not(.retry):not(.retryPartial) { left: 490px; top: 626px; bottom: auto; width: 950px; }
+
+/* the three tallest final panels, a touch smaller so each ends 16px above the card's edge (1050) */
+#feedback-popup.fb-q1:not(.retry):not(.retryPartial) .fb-body p { font-size: 32px; line-height: 1.15; }
+#feedback-popup.fb-q7:not(.retry):not(.retryPartial) .fb-body p { font-size: 32px; line-height: 1.15; }
+#feedback-popup.fb-q8:not(.retry):not(.retryPartial) .fb-body p { font-size: 29px; line-height: 1.12; }
+
+/* Q1 retry panel: 10px lower, 16px clear of the equation */
+#feedback-popup.fb-q1.retry { margin-top: 10px; }
+/* Q4 (2026-11-12): both feedbacks sit under the answer box (the Hebrew puts them at 660px); the Arabic question text is longer, so the
+   box ends at 666px: start them 24px below it. Final panel ends at 989px, inside the card. */
+#feedback-popup.fb-q4, #feedback-popup.fb-q4.retry { top: 690px; }
