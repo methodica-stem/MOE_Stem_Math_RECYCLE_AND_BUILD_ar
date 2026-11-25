@@ -1223,3 +1223,12 @@ button, input, select, textarea { font-family: inherit; }
 [data-sid="q6a"] .bar-track::after, [data-sid="q6b"] .bar-track::after { background: #7b8594; }   /* the vertical line, same grey */
 [data-sid="q6b"] .bar-chart { left: 100px; width: 940px; }   /* wider, so the 5,000 numbers at this size do not touch */
 [data-sid="q6a"] .bar-axis-title, [data-sid="q6b"] .bar-axis-title { margin-top: 20px; font-size: 40px; }
+
+/* The Ministry of Education logo on the opening screen (the skill's .moe-logo; references/logo.md). */
+.moe-logo { position: absolute; top: 28px; right: 32px; z-index: 3; width: 240px; }
+.moe-logo img { display: block; width: 100%; height: auto; }
+.moe-logo--card { box-sizing: content-box; padding: 22px 34px; border-radius: 28px;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,.92) 0%, rgba(255,255,255,.6) 65%, rgba(255,255,255,0) 100%); }
+.moe-logo--left { right: auto; left: 32px; }
+/* On a video opening the logo shows on the poster and goes away when the video starts (the big play button hides then). */
+.play-btn-big.hidden ~ .moe-logo { display: none; }
