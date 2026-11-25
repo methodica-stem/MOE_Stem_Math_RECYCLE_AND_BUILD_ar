@@ -528,9 +528,8 @@
 </section>
 
 <!-- ================= Global elements (outside every screen) ================= -->
-<!-- The end of the lomda (script.js: showFinalScore / showReturnScreen). The score pop-up opens over the finish
-     picture; its X shows the dark screen that sends the learner back to the Moodle. The wording is the approved
-     house text; "העמוד הבא" has to be the label of the Moodle quiz's next-page button. -->
+<!-- The end of the lomda (script.js: showFinalScore / showReturnScreen). The score pop-up opens over the finish picture; its X shows the dark screen that sends the learner back to the Moodle.
+     The wording and the logo (assets/images/moodle-logo-white.svg) are the approved ending (Hebrew and Arabic). -->
 <div id="final-score" role="dialog" aria-modal="true" aria-labelledby="final-score-title" tabindex="-1" hidden>
   <div class="final-score-card">
     <button class="final-score-close" type="button" aria-label="إغلاق"></button>
@@ -540,7 +539,11 @@
   </div>
 </div>
 <div id="final-return" role="dialog" aria-modal="true" aria-labelledby="final-return-text" tabindex="-1" hidden>
-  <p id="final-return-text">الآن، عودوا إلى النموذج،<br>اضغطوا على زرّ "الصفحة التالية"<br>وأجيبوا عن الأسئلة.</p>
+  <div class="return-stage">
+    <p id="final-return-text" class="return-text">الآن أغلقوا الوحدة التعليمية<br>وعودوا للإجابة عن أسئلة المساق في<img class="return-moodle-logo" src="assets/images/moodle-logo-white.svg" alt="Moodle"></p>
+    <button class="return-close" type="button">إغلاق الوحدة التعليمية</button>
+    <p class="return-hint" hidden>يمكنكم إغلاق هذه النافذة.</p>
+  </div>
 </div>
 
 <div id="q-stepper" class="q-stepper" aria-hidden="true"></div>
