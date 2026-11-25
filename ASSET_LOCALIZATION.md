@@ -6,6 +6,8 @@ the skill's rule is to list it, with a proposed Arabic and a call on whether it 
 
 **Update 2026-11-24:** the six pictures `project-bg`, `deposit-value-bg`, `dream-bg`, `finish-bg`, `bg-street-dim` and `bg-garden-dim` now exist in real Arabic in `assets-ar/images/` (made by Yael, checked against the originals). Still Hebrew: the two video posters (`video-cart-poster.jpg`, `video-end-poster.jpg`) and the videos themselves.
 
+**Update 2026-11-25:** the five Arabic videos are in (`assets-ar/_delivered/2026-11-25/RECYCLE_ARAB_PART1-5_V1.mp4`, re-encoded to `assets-ar/videos/video-*.mp4`). They are new pictures with the Arabic lettering already in them (shop sign "الزاوية", chalkboard "مكاننا"), and the three posters (`video-open-poster.jpg`, `video-cart-poster.jpg`, `video-end-poster.jpg`) are now the first frame of each Arabic video. The review-layer proposals for screens 8 and 19 are gone. The rows for `video-cart-poster`, `video-end-poster`, `video-cart` and `video-end` below are done.
+
 ## How the list was made
 
 - Contact sheets of all 31 files in `assets/images/`, looked at by eye (an automated text sweep reads live text only;
